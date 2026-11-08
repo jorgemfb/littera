@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="AppleTitle" content="Ayuda de Littera">
+<meta name="AppleIcon" content="LitteraHelpIcon.png">
+<title>Ayuda de Littera</title>
+<link rel="stylesheet" href="../shared/help.css">
+</head>
+<body>
+<a name="littera-help-index"></a>
+<header>
+  <h1>Ayuda de Littera</h1>
+  <p class="subtitle">Editor de Markdown para macOS</p>
+</header>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#ventana">La ventana de Littera</a></li>
+    <li><a href="#primeros-pasos">Primeros pasos</a></li>
+    <li><a href="#modos">Modos de edición</a></li>
+    <li><a href="#busqueda">Búsqueda y reemplazo</a></li>
+    <li><a href="#formato">Formato</a></li>
+    <li><a href="#propiedades">Propiedades del documento</a></li>
+    <li><a href="#edicion">Edición asistida</a></li>
+    <li><a href="#mermaid">Diagramas Mermaid</a></li>
+    <li><a href="#paleta">Paleta de comandos</a></li>
+    <li><a href="#exportar">Exportar</a></li>
+    <li><a href="#ajustes">Preferencias</a></li>
+    <li><a href="#atajos">Atajos de teclado</a></li>
+    <li><a href="#privacidad">Privacidad</a></li>
+    <li><a href="#gatekeeper">Primera apertura</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="ventana">
+<h2>La ventana de Littera</h2>
+<p>Littera muestra un documento por ventana, con el texto como protagonista. La barra superior es la de macOS:</p>
+<ul>
+  <li><strong>Título del documento</strong>, centrado: un punto indica cambios sin guardar. Al pulsarlo se abren los documentos abiertos (<kbd>⇧⌘O</kbd>).</li>
+  <li>A la derecha, <strong>propiedades del documento</strong>, la <strong>lupa</strong> (<kbd>⌘F</kbd>) y el menú <code>···</code> con guardar, exportar, anchura del texto, máquina de escribir, estadísticas y Ajustes.</li>
+  <li>La barra de estado (palabras, estado de guardado y modo) está oculta; actívala en <strong>Ajustes → General</strong>.</li>
+</ul>
+</section>
+
+<section id="primeros-pasos">
+<h2>Primeros pasos</h2>
+<h3>Abrir un documento</h3>
+<ul>
+  <li><strong>Archivo → Abrir…</strong> (<kbd>⌘O</kbd>) abre un archivo <code>.md</code> existente. También puedes abrirlo desde Finder o arrastrarlo al icono de Littera.</li>
+  <li><strong>Archivo → Nuevo</strong> (<kbd>⌘N</kbd>) crea un documento nuevo con las <a href="#propiedades">propiedades del documento</a> ya preparadas.</li>
+  <li>Al arrancar sin documentos, Littera crea uno vacío (o muestra el panel Abrir, según Ajustes → General).</li>
+</ul>
+<h3>Guardar</h3>
+<ul>
+  <li><strong>Archivo → Guardar</strong> (<kbd>⌘S</kbd>) guarda en el archivo actual.</li>
+  <li><strong>Archivo → Guardar como…</strong> (<kbd>⇧⌘S</kbd>) guarda con otro nombre o ubicación.</li>
+  <li>Si el archivo cambió fuera de Littera, te pregunta antes de sobrescribirlo. Si es de solo lectura, no lo toca y te propone Guardar como.</li>
+</ul>
+<h3>Documentos recientes</h3>
+<p><strong>Archivo → Abrir reciente</strong>, o la paleta (<kbd>⌘K</kbd> o <kbd>⇧⌘O</kbd>), que muestra los abiertos y después los recientes.</p>
+</section>
+
+<section id="modos">
+<h2>Modos de edición</h2>
+<p>Littera tiene tres modos. Cámbialos con <kbd>⌘1</kbd>, <kbd>⌘2</kbd> y <kbd>⌘3</kbd>, desde el menú <strong>Visualización</strong> o la paleta (<kbd>⌘K</kbd>):</p>
+<table>
+  <thead><tr><th>Modo</th><th>Atajo</th><th>Descripción</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fuente</strong></td><td><kbd>⌘1</kbd></td><td>Edición del Markdown con resaltado.</td></tr>
+    <tr><td><strong>Dividido</strong></td><td><kbd>⌘2</kbd></td><td>Fuente a la izquierda y vista previa a la derecha, sincronizadas.</td></tr>
+    <tr><td><strong>Vista previa</strong></td><td><kbd>⌘3</kbd></td><td>Solo lectura, con el aspecto final del documento.</td></tr>
+  </tbody>
+</table>
+<p>Cambiar de modo no crea copias ni modifica el archivo, y <kbd>⌘Z</kbd> sigue deshaciendo lo que escribiste antes del cambio.</p>
+</section>
+
+<section id="busqueda">
+<h2>Búsqueda y reemplazo</h2>
+<ul>
+  <li><kbd>⌘F</kbd> — Abre el buscador.</li>
+  <li><kbd>⌘G</kbd> / <kbd>⇧⌘G</kbd> — Resultado siguiente / anterior.</li>
+  <li><kbd>⌥⌘F</kbd> — Abre el buscador con el campo de reemplazo.
+    <ul>
+      <li><strong>Reemplazar</strong> sustituye la coincidencia actual.</li>
+      <li><strong>Reemplazar todo</strong> sustituye todas las coincidencias.</li>
+    </ul>
+  </li>
+</ul>
+<p>La búsqueda no distingue mayúsculas ni acentos.</p>
+</section>
+
+<section id="formato">
+<h2>Formato</h2>
+<p>Todos los comandos de formato (encabezados, listas, citas, código, tablas, enlaces…) están en la paleta (<kbd>⌘K</kbd>). Tres tienen atajo por omisión:</p>
+<table>
+  <thead><tr><th>Acción</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Negrita</td><td><kbd>⌘B</kbd></td></tr>
+    <tr><td>Cursiva</td><td><kbd>⌘I</kbd></td></tr>
+    <tr><td>Enlace</td><td><kbd>⇧⌘K</kbd></td></tr>
+  </tbody>
+</table>
+<p>Puedes asignar atajos a los demás en <strong>Ajustes → Atajos</strong>.</p>
+</section>
+
+<section id="propiedades">
+<h2>Propiedades del documento</h2>
+<p>El botón de propiedades de la barra superior (también en <code>···</code> y en la paleta) edita el frontmatter YAML del documento sin escribir YAML:</p>
+<ul>
+  <li><strong>Título</strong> (<code>title</code>): se guarda al pulsar <kbd>Intro</kbd> o al salir del campo.</li>
+  <li><strong>Estado</strong> (<code>status</code>): Borrador, En desarrollo, En revisión o Terminado.</li>
+  <li><strong>Etiquetas</strong> (<code>tags</code>): escribe una o varias separadas por comas y pulsa <kbd>Intro</kbd>; la <strong>×</strong> quita una.</li>
+  <li><strong>Fecha de creación</strong> (<code>created</code>), en formato <code>AAAA-MM-DD</code>.</li>
+  <li><strong>Generar índice automáticamente</strong> (<code>toc</code>): muestra un índice con los encabezados de nivel 1 a 3 al principio de la Vista previa, el PDF y el HTML.</li>
+  <li>Las demás claves del frontmatter también se pueden editar: los valores simples como texto, las listas como etiquetas y los objetos o textos de varias líneas como YAML.</li>
+</ul>
+<p>Los documentos nuevos empiezan con estas propiedades ya preparadas. Cada cambio se puede deshacer con <kbd>⌘Z</kbd>, y el YAML sigue visible y editable en Fuente.</p>
+</section>
+
+<section id="edicion">
+<h2>Edición asistida</h2>
+<ul>
+  <li><strong>Listas</strong>: <kbd>Intro</kbd> en un elemento de lista (viñetas, numerada, tarea o cita) crea el siguiente; en un elemento vacío, termina la lista. Se desactiva en Ajustes → Editor → Continuar listas.</li>
+  <li><strong>Cierre de símbolos</strong>: al escribir <code>(</code>, <code>[</code>, <code>{</code>, <code>"</code>, <code>`</code>, <code>*</code> o <code>_</code> se añade el cierre; con texto seleccionado, lo rodea. Se desactiva en Ajustes → Editor → Cerrar símbolos.</li>
+  <li><strong>Pegar enlace</strong>: con texto seleccionado, pegar una URL (<code>http</code>, <code>https</code> o <code>mailto</code>) crea <code>[texto](url)</code>.</li>
+  <li><strong>Convertir texto</strong>: con texto seleccionado, el menú contextual ofrece Mayúsculas, Minúsculas y Capitalizar.</li>
+  <li>Desde la paleta (grupo Edición) puedes limpiar los espacios finales y ordenar líneas.</li>
+  <li><strong>Insertar fecha</strong>: el formato se elige en Ajustes → Editor → Formato de fecha.</li>
+</ul>
+<table>
+  <thead><tr><th>Acción</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Mover líneas arriba / abajo</td><td><kbd>⌥⌘↑</kbd> / <kbd>⌥⌘↓</kbd></td></tr>
+    <tr><td>Duplicar línea</td><td><kbd>⌘D</kbd></td></tr>
+    <tr><td>Alternar tarea <code>- [ ]</code> / <code>- [x]</code></td><td><kbd>⌘↩</kbd></td></tr>
+    <tr><td>Insertar fecha actual</td><td><kbd>⇧⌘D</kbd></td></tr>
+  </tbody>
+</table>
+</section>
+
+<section id="mermaid">
+<h2>Diagramas Mermaid</h2>
+<p>Un bloque de código con el lenguaje <code>mermaid</code> se dibuja como diagrama de flujo en la Vista previa, en el panel derecho de Dividido y en las exportaciones (PDF y HTML). En Fuente se edita como código, con resaltado.</p>
+<pre><code>```mermaid
+flowchart TD
+    A[Inicio] --&gt; B{¿Guardado?}
+    B --&gt;|Sí| C(Exportar)
+    B -- No --&gt; D[Guardar] --&gt; C
+```</code></pre>
+<ul>
+  <li><strong>Dirección</strong>: <code>TD</code>/<code>TB</code>, <code>BT</code>, <code>LR</code> y <code>RL</code>, tras <code>flowchart</code> o <code>graph</code>.</li>
+  <li><strong>Formas</strong>: <code>[rectángulo]</code>, <code>(redondeado)</code>, <code>([estadio])</code>, <code>((círculo))</code>, <code>{rombo}</code>, <code>{{hexágono}}</code>, <code>[[subrutina]]</code> y <code>[(cilindro)]</code>.</li>
+  <li><strong>Conexiones</strong>: <code>--&gt;</code>, <code>---</code>, <code>-.-&gt;</code>, <code>==&gt;</code> y <code>&lt;--&gt;</code>, con etiqueta como <code>--&gt;|texto|</code> o <code>-- texto --&gt;</code>; varias a la vez con <code>&amp;</code>.</li>
+</ul>
+<p>Littera dibuja los diagramas sin conexión y sin JavaScript. Otros tipos de Mermaid o una línea que no entienda se muestran como código, con un aviso.</p>
+</section>
+
+<section id="paleta">
+<h2>Paleta de comandos</h2>
+<p><kbd>⌘K</kbd> abre la paleta: busca a la vez documentos (los abiertos y los recientes) y comandos (modos, formato, edición, exportar…). Navega con las flechas, confirma con <kbd>Intro</kbd> y ciérrala con <kbd>Escape</kbd>.</p>
+<p><kbd>⇧⌘O</kbd>, o un clic en el título, abre la paleta solo con documentos: el activo y los abiertos primero, después los recientes. Elegir uno reciente lo abre.</p>
+<h3>Modo máquina de escribir</h3>
+<p>Actívalo desde el menú <code>···</code>. La línea que editas se mantiene centrada y el resto del texto aparece atenuado.</p>
+</section>
+
+<section id="exportar">
+<h2>Exportar</h2>
+<p>Desde el menú <code>···</code>, la paleta o <strong>Archivo → Exportar</strong>:</p>
+<ul>
+  <li><strong>HTML</strong> — Genera un archivo <code>.html</code> con el contenido renderizado.</li>
+  <li><strong>PDF</strong> — Genera un PDF con el aspecto de la Vista previa, incluidas las imágenes locales.</li>
+</ul>
+<h3>Imágenes</h3>
+<p>Littera carga imágenes locales con rutas relativas o absolutas cuando autorizas su carpeta. Se incluyen en la exportación a PDF.</p>
+<pre><code>![Descripción](./imagen.png)
+![Descripción](/ruta/absoluta/imagen.jpg)</code></pre>
+</section>
+
+<section id="ajustes">
+<h2>Preferencias</h2>
+<p>Ábrelas con <kbd>⌘,</kbd> o desde <code>···</code> → Ajustes. Los cambios se aplican al instante.</p>
+<table>
+  <thead><tr><th>Pestaña</th><th>Contenido</th></tr></thead>
+  <tbody>
+    <tr><td><strong>General</strong></td><td>Idioma, apariencia (Sistema, Claro u Oscuro), barra de estado, vista inicial, restaurar los documentos abiertos, qué mostrar al arrancar sin documentos, guardado automático y carpeta predeterminada.</td></tr>
+    <tr><td><strong>Editor</strong></td><td>Tamaño de letra, anchura del texto (Fuente, Dividido y Vista previa), resaltado, interlineado, máquina de escribir, ortografía, listas, cierre de símbolos y formato de fecha.</td></tr>
+    <tr><td><strong>Atajos</strong></td><td>Personalizar los atajos de documentos, búsqueda, vistas, formato y edición.</td></tr>
+  </tbody>
+</table>
+<h3>Guardado automático</h3>
+<p>Con <strong>Ajustes → General → Guardar automáticamente</strong>, Littera guarda los documentos que ya tienen archivo cuando dejas de escribir un par de segundos, al cambiar de app y al cerrarlos. Los documentos nuevos se guardan la primera vez con <kbd>⌘S</kbd>. Si el archivo cambió fuera de Littera, no se sobrescribe. Está desactivado por omisión.</p>
+<h3>Carpeta predeterminada e iCloud Drive</h3>
+<p>En <strong>Ajustes → General → Carpeta predeterminada</strong>, pulsa <strong>Elegir…</strong> para indicar dónde se proponen los documentos nuevos y dónde empiezan los paneles Abrir y Exportar. Puede ser una carpeta de tu Mac o de iCloud Drive (opcional); Littera indica cuándo está en iCloud Drive. Cambiarla no mueve los documentos que ya tienes.</p>
+<ul>
+  <li>Si abres un documento que está en iCloud pero no en este Mac, Littera lo descarga y lo abre al terminar. Sin conexión, te avisa.</li>
+  <li>Si dos dispositivos guardan el mismo documento a la vez, Littera pregunta: <strong>Conservar ambas</strong>, <strong>Conservar la de este Mac</strong> o <strong>Usar la otra</strong>.</li>
+</ul>
+</section>
+
+<section id="atajos">
+<h2>Atajos de teclado</h2>
+<table>
+  <thead><tr><th>Acción</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Nuevo documento</td><td><kbd>⌘N</kbd></td></tr>
+    <tr><td>Abrir…</td><td><kbd>⌘O</kbd></td></tr>
+    <tr><td>Documentos abiertos</td><td><kbd>⇧⌘O</kbd></td></tr>
+    <tr><td>Guardar</td><td><kbd>⌘S</kbd></td></tr>
+    <tr><td>Guardar como…</td><td><kbd>⇧⌘S</kbd></td></tr>
+    <tr><td>Cerrar documento</td><td><kbd>⌘W</kbd></td></tr>
+    <tr><td>Paleta de comandos</td><td><kbd>⌘K</kbd></td></tr>
+    <tr><td>Fuente / Dividido / Vista previa</td><td><kbd>⌘1</kbd> / <kbd>⌘2</kbd> / <kbd>⌘3</kbd></td></tr>
+    <tr><td>Buscar</td><td><kbd>⌘F</kbd></td></tr>
+    <tr><td>Buscar y reemplazar</td><td><kbd>⌥⌘F</kbd></td></tr>
+    <tr><td>Siguiente / anterior resultado</td><td><kbd>⌘G</kbd> / <kbd>⇧⌘G</kbd></td></tr>
+    <tr><td>Negrita / Cursiva / Enlace</td><td><kbd>⌘B</kbd> / <kbd>⌘I</kbd> / <kbd>⇧⌘K</kbd></td></tr>
+    <tr><td>Mover líneas arriba / abajo</td><td><kbd>⌥⌘↑</kbd> / <kbd>⌥⌘↓</kbd></td></tr>
+    <tr><td>Duplicar línea</td><td><kbd>⌘D</kbd></td></tr>
+    <tr><td>Alternar tarea</td><td><kbd>⌘↩</kbd></td></tr>
+    <tr><td>Insertar fecha actual</td><td><kbd>⇧⌘D</kbd></td></tr>
+    <tr><td>Ajustes</td><td><kbd>⌘,</kbd></td></tr>
+    <tr><td>Ayuda de Littera</td><td><kbd>F1</kbd></td></tr>
+  </tbody>
+</table>
+</section>
+
+<section id="privacidad">
+<h2>Privacidad</h2>
+<p>Littera es una app nativa para macOS y funciona sin conexión a Internet ni Apple ID. No envía datos a servidores externos. Los documentos son archivos <code>.md</code> normales, guardados donde tú decidas: en tu Mac o, si quieres, en iCloud Drive.</p>
+<h3>Cambios externos</h3>
+<p>Si otro programa modifica el archivo mientras lo editas, Littera te pregunta si quieres <strong>mantener tu versión</strong> o <strong>cargar la del disco</strong>. Si no lo estabas editando, lo recarga sin preguntar.</p>
+<h3>Restaurar sesión</h3>
+<p>Con la opción activa en Ajustes → General, Littera reabre al arrancar los documentos de la sesión anterior.</p>
+<h3>Frontmatter YAML</h3>
+<p>Littera reconoce un bloque YAML al inicio del documento delimitado por <code>---</code>. Aparece destacado en Fuente y en Dividido, y queda oculto en la Vista previa.</p>
+</section>
+
+<section id="gatekeeper">
+<h2>Primera apertura (macOS Gatekeeper)</h2>
+<p>Si macOS muestra la alerta «No se ha abierto Littera» al abrirla por primera vez:</p>
+<ol>
+  <li>Ve a <strong>Configuración del sistema → Privacidad y seguridad</strong>.</li>
+  <li>Baja hasta la sección <strong>Seguridad</strong>.</li>
+  <li>Verás el mensaje <em>«"Littera" fue bloqueada porque no es de un desarrollador identificado»</em>. Pulsa <strong>Abrir igualmente</strong>.</li>
+  <li>En la siguiente alerta, confirma pulsando <strong>Abrir</strong>.</li>
+</ol>
+<p>Littera aún no tiene firma de distribución pública de Apple.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>Littera · Editor de Markdown para macOS</p>
+</footer>
+</body>
+</html>
